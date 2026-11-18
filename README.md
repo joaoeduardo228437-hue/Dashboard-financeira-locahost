@@ -1,96 +1,69 @@
-# 💰 Finance Dashboard
+Finance Dashboard
 
-Dashboard financeiro pessoal feito com **React**, **Vite** e **Tailwind CSS v4**.
-Os dados ficam salvos no `localStorage` do navegador, então não somem ao dar F5.
+Um dashboard simples para controle financeiro pessoal, feito com React, Vite e Tailwind CSS.
 
-## Funcionalidades
+Os dados ficam salvos no navegador usando "localStorage", então continuam lá mesmo depois de atualizar a página.
 
-- Resumo no topo com saldo total, receitas e despesas
-- Formulário para adicionar transações (receita/despesa, valor, descrição e categoria)
-- Histórico de transações com opção de apagar itens
-- Persistência automática no navegador
+Funcionalidades
 
-## Tecnologias
+- Visualizar saldo, receitas e despesas.
+- Adicionar receitas e despesas.
+- Informar descrição, valor e categoria.
+- Ver o histórico de transações.
+- Excluir transações.
 
-- [React](https://react.dev/)
-- [Vite](https://vite.dev/)
-- [Tailwind CSS v4](https://tailwindcss.com/)
+Tecnologias utilizadas
 
-## Como rodar localmente
+- React
+- Vite
+- Tailwind CSS
 
-Pré-requisito: [Node.js](https://nodejs.org/) 20.19 ou superior.
+Como executar o projeto
 
-```bash
-# 1. clonar o repositório (ou abrir a pasta do projeto)
+É necessário ter o "Node.js" (https://nodejs.org/) instalado.
+
+# Clonar o projeto
 git clone https://github.com/SEU-USUARIO/finance-dashboard.git
+
+# Entrar na pasta
 cd finance-dashboard
 
-# 2. instalar as dependências
+# Instalar dependências
 npm install
 
-# 3. iniciar o servidor de desenvolvimento
+# Iniciar o projeto
 npm run dev
-```
 
-Abra no navegador o endereço mostrado no terminal (normalmente http://localhost:5173).
+Depois, é só acessar o endereço que aparecer no terminal, geralmente "http://localhost:5173".
 
-## Scripts
+Comandos disponíveis
 
-| Comando           | Descrição                    |
-| ----------------- | ---------------------------- |
-| `npm run dev`     | Servidor de desenvolvimento  |
-| `npm run build`   | Gera a build de produção     |
-| `npm run preview` | Visualiza a build localmente |
+Comando| Função
+"npm run dev"| Inicia o projeto
+"npm run build"| Gera a versão de produção
+"npm run preview"| Visualiza a versão de produção
 
-## Estrutura de pastas
+Estrutura do projeto
 
-```
-finance-dashboard/
-├── src/
-│   ├── components/
-│   │   ├── Summary.jsx
-│   │   ├── TransactionForm.jsx
-│   │   └── TransactionList.jsx
-│   ├── hooks/
-│   │   └── useLocalStorage.js
-│   ├── utils/
-│   │   └── format.js
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
+src/
+├── components/
+│   ├── Summary.jsx
+│   ├── TransactionForm.jsx
+│   └── TransactionList.jsx
+├── hooks/
+│   └── useLocalStorage.js
+├── utils/
+│   └── format.js
+├── App.jsx
+├── index.css
+└── main.jsx
 
-## Subindo para o GitHub
+Melhorias futuras
 
-1. No GitHub, crie um repositório **vazio** chamado `finance-dashboard`
-   (sem README, `.gitignore` ou licença).
-2. Na pasta do projeto, rode:
+- Adicionar gráficos de despesas.
+- Filtrar transações por mês.
+- Exportar dados para CSV.
 
-```bash
-git init
-git add .
-git commit -m "feat: dashboard financeiro inicial"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/finance-dashboard.git
-git push -u origin main
-```
-
-Se o Git pedir senha no `push`, use um **Personal Access Token**
-(GitHub → Settings → Developer settings → Personal access tokens) no lugar da senha,
-ou autentique com o GitHub CLI: `gh auth login`.
-
-## Próximas ideias
-
-- Gráfico de despesas por categoria
-- Filtro por mês e por tipo
-- Exportar transações em CSV
-- Deploy gratuito na Vercel ou Netlify
-
-## Licença
+Licença
 
 MIT
